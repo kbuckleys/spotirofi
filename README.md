@@ -53,7 +53,7 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 - Replace your playerctl keybinds with these. Other programs that use playerctl will still play along with these binds:
 
 ~~~
- ```lua ~/.config/rofi/scripts/spotify/spotify.lua play-pause || playerctl play-pause```
- ```lua ~/.config/rofi/scripts/spotify/spotify.lua prev || playerctl previous```
- ```lua ~/.config/rofi/scripts/spotify/spotify.lua next || playerctl next```
+ lua ~/.config/rofi/scripts/spotify/spotify.lua play-pause || playerctl play-pause
+ lua ~/.config/rofi/scripts/spotify/spotify.lua prev || playerctl previous
+ lua ~/.config/rofi/scripts/spotify/spotify.lua next || playerctl next
 ~~~
