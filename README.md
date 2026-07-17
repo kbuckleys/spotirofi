@@ -34,4 +34,4 @@ While I could transition to Spotify's Web API for broader compatibility, there a
 - No local cache fallback — Currently the script reads spotify_player's local cache files as a fallback. Pure API means if the API is down or rate-limited, nothing happens.
 - Pagination everywhere — Liked tracks, playlists, search results, followed artists are all paginated (max 50 per page). More code to handle that.
 
-Long story short, spotify-player does most of the heavy lifting and the rofi interface is a mere portal to its cache.
+Long story short, spotify-player does most of the heavy lifting and the rofi interface is a mere portal to its CLI and cache.
