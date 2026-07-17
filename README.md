@@ -30,9 +30,6 @@ This is a near complete replacement for spotify-player's UI, almost everything y
 
 The script assumes you already have spotify-player installed and authenticated. At launch, it will automatically run the daemon ```spotify_player -d``` and you can start using the rofi interface right away. You're still able to run spotify-player normally, even with the daemon running, in case you want more advanced functionalities.
 
-# To-do
-- Improve initial load times for menus. (the very first cold start will always be slightly slower as the daemon is being loaded, unless you have the daemon in your compositor's autostart list)
-
 # But why only for spotify-player?
 While I could transition to Spotify's Web API for broader compatibility, there are plenty of drawbacks that come along with it:
 - Latency — Every search, library load, detail fetch becomes an HTTP round trip instead of a local process call. Browsing an artist, album, tracks means 3 sequential API calls with network overhead.
@@ -42,3 +39,6 @@ While I could transition to Spotify's Web API for broader compatibility, there a
 - Pagination everywhere — Liked tracks, playlists, search results, followed artists are all paginated (max 50 per page). More code to handle that.
 
 Long story short, spotify-player does most of the heavy lifting and the rofi interface is a mere portal to its CLI and cache.
+
+# To-do
+- Improve initial load times for menus. (the very first cold start will always be slightly slower as the daemon is being loaded, unless you have the daemon in your compositor's autostart list)
