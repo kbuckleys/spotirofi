@@ -24,4 +24,4 @@ The script assumes you already have spotify-player installed and authenticated. 
 
 # To-do
 - Improve initial load times for menus at first run.
-- Search is practically useless for some reason. Needs looking into.
+- Search filtering is practically useless for some reason. Needs looking into.
