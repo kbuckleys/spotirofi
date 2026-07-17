@@ -18,10 +18,18 @@ This is a near complete replacement to spotify-player's UI, almost everything yo
 
 - Precise seeking.
 - View lyrics (might be doable, remains to be looked into)
-- There's an API cap on some results (20), so at one point you'll have to use the main client.
+- Result pagination is hard capped, so at one point you'll have to use the main client.
 
 The script assumes you already have spotify-player installed and authenticated. At launch, it will automatically run the daemon ```spotify_player -d``` and you can start using the rofi interface right away. You're still able to run spotify-player normally, even with the daemon running, in case you want more advanced functionalities.
 
 # To-do
 - Improve initial load times for menus at first run.
 - Search filtering is practically useless for some reason. Needs looking into.
+
+# But why only for spotify-player?
+While I could transition to Spotify's Web API, there are plenty of drawbacks that come along with it:
+- Latency — Every search, library load, detail fetch becomes an HTTP round trip instead of a local process call. Browsing an artist, album, tracks means 3 sequential API calls with network overhead.
+- Rate limiting — Spotify API limits to ~180 requests per minute per app. Heavy browsing (opening multiple artists, albums) could hit this.
+- Token depends on spotify_player — Alternatively, implementing full OAuth2 (register a Spotify app, browser-based auth flow, handle redirects) is possible but more complex.
+- No local cache fallback — Currently the script reads spotify_player's local cache files as a fallback. Pure API means if the API is down or rate-limited, nothing happens.
+- Pagination everywhere — Liked tracks, playlists, search results, followed artists are all paginated (max 50 per page). More code to handle that.
