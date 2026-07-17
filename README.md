@@ -1,6 +1,6 @@
 <b>A launcher for your tunes!</b> An advanced [rofi](https://github.com/davatorium/rofi) interface primarily designed for [spotify-player](https://github.com/aome510/spotify-player) and a part of the [ZENWORKS](https://github.com/kbuckleys/ZENWORKS) Suite.
 
----
+<br>
 
 <table>
   <tr>
@@ -16,7 +16,7 @@
     </td>
   </tr>
 
-<br>
+---
 
 This is a near complete replacement to spotify-player's UI, almost everything you can do in the main client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's much you can do in this interface, so I'd rather list the things you CANNOT do:
 
