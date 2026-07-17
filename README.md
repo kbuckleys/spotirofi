@@ -4,15 +4,11 @@
 
 <table>
   <tr>
-    <td align="center">
       <img width="1030" height="211" alt="2026-07-17-073212_hyprshot" src="https://github.com/user-attachments/assets/25545ad7-e825-4b47-8e10-08859e1b40e0" />
       <br/>
-      <b>Main Menu</b>
     </td>
-    <td align="center">
       </table> <img width="1031" height="337" alt="2026-07-17-073255_hyprshot" src="https://github.com/user-attachments/assets/a9dd4ba4-081c-4ada-bcb2-85eebbaf07e5" />
       <br/>
-      <b>Liked Tracks</b>
     </td>
   </tr>
 
