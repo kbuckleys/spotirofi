@@ -43,6 +43,7 @@ element {
     padding: 2px 8px;
 }
 element-text {
+    font: "0xProto Nerd Font 14";
     highlight: bold #b6e0a4;
 }
 element-text selected {
