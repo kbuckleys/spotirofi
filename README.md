@@ -37,7 +37,7 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 
 # Dependencies
 - rofi
-- spotify_player
+- spotify-player
 - cjson
 - lua 5.3+
 - curl
