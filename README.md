@@ -4,13 +4,21 @@
 
 <table>
   <tr>
-      <img width="1030" height="211" alt="2026-07-17-073212_hyprshot" src="https://github.com/user-attachments/assets/25545ad7-e825-4b47-8e10-08859e1b40e0" />
+      <img width="1025" height="200" alt="2026-07-17-101329_hyprshot" src="https://github.com/user-attachments/assets/03964392-467b-4515-9366-6443e03be949" />
       <br/>
     </td>
-      </table> <img width="1031" height="337" alt="2026-07-17-073255_hyprshot" src="https://github.com/user-attachments/assets/a9dd4ba4-081c-4ada-bcb2-85eebbaf07e5" />
+      <img width="1024" height="329" alt="2026-07-17-101419_hyprshot" src="https://github.com/user-attachments/assets/17dbe8be-70a8-4511-a35e-826316e33fcf" />
       <br/>
+    </td>
+      <img width="1029" height="77" alt="2026-07-17-101352_hyprshot" src="https://github.com/user-attachments/assets/0621ee5e-ea1a-42d1-920f-5ab889d50e24" />
+    <br/>
     </td>
   </tr>
+
+  
+
+
+
 
 ---
 
@@ -24,7 +32,6 @@ The script assumes you already have spotify-player installed and authenticated. 
 
 # To-do
 - Improve initial load times for menus at first run.
-- Search filtering is practically useless for some reason. Needs looking into.
 
 # But why only for spotify-player?
 While I could transition to Spotify's Web API for broader compatibility, there are plenty of drawbacks that come along with it:
