@@ -27,9 +27,11 @@ The script assumes you already have spotify-player installed and authenticated. 
 - Search filtering is practically useless for some reason. Needs looking into.
 
 # But why only for spotify-player?
-While I could transition to Spotify's Web API, there are plenty of drawbacks that come along with it:
+While I could transition to Spotify's Web API for broader compatibility, there are plenty of drawbacks that come along with it:
 - Latency — Every search, library load, detail fetch becomes an HTTP round trip instead of a local process call. Browsing an artist, album, tracks means 3 sequential API calls with network overhead.
 - Rate limiting — Spotify API limits to ~180 requests per minute per app. Heavy browsing (opening multiple artists, albums) could hit this.
 - Token depends on spotify_player — Alternatively, implementing full OAuth2 (register a Spotify app, browser-based auth flow, handle redirects) is possible but more complex.
 - No local cache fallback — Currently the script reads spotify_player's local cache files as a fallback. Pure API means if the API is down or rate-limited, nothing happens.
 - Pagination everywhere — Liked tracks, playlists, search results, followed artists are all paginated (max 50 per page). More code to handle that.
+
+Long story short, spotify-player does most of the heavy lifting and the rofi interface is a mere portal to its cache.
