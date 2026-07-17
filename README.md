@@ -47,6 +47,3 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 
 # Installation
 Simply drop both directories in ```~/.config/rofi/``` and set a keybind or shortcut to ```spotify.lua```.
-
-# To-do
-- Improve initial load times for menus. (the very first cold start will always be slightly slower as the daemon is being loaded, unless you have the daemon in your compositor's autostart list)
