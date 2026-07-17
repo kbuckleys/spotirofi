@@ -17,10 +17,9 @@
 
 ---
 
-This is a near complete replacement for spotify-player's UI, almost everything you can do in the main client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's much you can do in this interface, so I'd rather list the things you CANNOT do:
+This is a near complete replacement for spotify-player's UI, almost everything you can do in the main client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's a lot you can do in this interface -and I mean A LOT- you can even show lyrics! So I'd rather list the things you CANNOT do:
 
 - Precise seeking.
-- View lyrics (might be doable, remains to be looked into)
 - Result pagination is hard capped, so at one point you'll have to use the main client.
 
 The script assumes you already have spotify-player installed and authenticated. At launch, it will automatically run the daemon ```spotify_player -d``` and you can start using the rofi interface right away. You're still able to run spotify-player normally, even with the daemon running, in case you want more advanced functionalities.
@@ -32,6 +31,15 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 - Token depends on spotify_player — Alternatively, implementing full OAuth2 (register a Spotify app, browser-based auth flow, handle redirects) is possible but more complex.
 - No local cache fallback — Currently the script reads spotify_player's local cache files as a fallback. Pure API means if the API is down or rate-limited, nothing happens.
 - Pagination everywhere — Liked tracks, playlists, search results, followed artists are all paginated (max 50 per page). More code to handle that.
+
+# Dependencies
+- lua 5.3+
+- cjson
+- rofi
+- spotify_player
+- curl
+- xdg-open
+- pgrep
 
 # Installation
 Simply drop both directories in ```~/.config/rofi/``` and set a keybind or shortcut to ```spotify.lua```.
