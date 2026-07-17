@@ -10,4 +10,4 @@ This is a near complete replacement to spotify-player's UI, almost everything yo
 - View lyrics (might be doable, remains to be looked into)
 - There's an API cap on some results (20), so at one point you'll have to use the main client.
 
-The script assumes you already have spotify-player installed and authenticated. At launch, it will automatically run the daemon ```spotify-player -d``` and you can start using the rofi interface right away. You're still able to run spotify-player normally, even with the daemon running, in case you want more advanced functionalities.
+The script assumes you already have spotify-player installed and authenticated. At launch, it will automatically run the daemon ```spotify_player -d``` and you can start using the rofi interface right away. You're still able to run spotify-player normally, even with the daemon running, in case you want more advanced functionalities.
