@@ -4,13 +4,16 @@
 
 <table>
   <tr>
-      <img width="1025" height="200" alt="2026-07-17-101329_hyprshot" src="https://github.com/user-attachments/assets/03964392-467b-4515-9366-6443e03be949" />
+      <img width="1016" height="198" alt="2026-07-17-130549_hyprshot" src="https://github.com/user-attachments/assets/66bf2901-c6df-4c43-a175-ef53110ae027" />
       <br/>
     </td>
-      <img width="1024" height="329" alt="2026-07-17-101419_hyprshot" src="https://github.com/user-attachments/assets/17dbe8be-70a8-4511-a35e-826316e33fcf" />
+      <img width="1023" height="328" alt="2026-07-17-130738_hyprshot" src="https://github.com/user-attachments/assets/c7e6915e-a44e-4857-b3ca-5c1b5c22b9b5" />
       <br/>
     </td>
-      <img width="1029" height="77" alt="2026-07-17-101352_hyprshot" src="https://github.com/user-attachments/assets/0621ee5e-ea1a-42d1-920f-5ab889d50e24" />
+      <img width="1019" height="281" alt="2026-07-17-130604_hyprshot" src="https://github.com/user-attachments/assets/bf1ac057-d3d6-44f1-8de0-88e7e396dfec" />
+    <br/>
+    </td>
+      <img width="1019" height="272" alt="2026-07-17-130620_hyprshot" src="https://github.com/user-attachments/assets/d7325747-74c9-4001-a2f4-21e04328c6ad" />
     <br/>
     </td>
   </tr>
