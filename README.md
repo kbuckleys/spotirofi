@@ -33,13 +33,14 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 - Pagination everywhere — Liked tracks, playlists, search results, followed artists are all paginated (max 50 per page). More code to handle that.
 
 # Dependencies
-- lua 5.3+
-- cjson
 - rofi
 - spotify_player
+- cjson
+- lua 5.3+
 - curl
 - xdg-open
 - pgrep
+- A nerd font
 
 # Installation
 Simply drop both directories in ```~/.config/rofi/``` and set a keybind or shortcut to ```spotify.lua```.
