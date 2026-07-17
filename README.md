@@ -46,7 +46,7 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 - A nerd font
 
 > [!NOTE]
-> Unfortunately, due to a lot of track id mismatches, ```playerctl``` doesn't communicate well with spotify_player -d, which is strange because spotify-player works fine with playerctl. In short; the daemon's broken context queue makes the rofi interface play the wrong tracks and consequently; break proper continuous context-based playback. So the solution is a set of compositor keybinds that will replace your playerctl's (if you use them). If you don't use them, no need to worry about step 2 of the installation process. This is purely for using quick keybinds to play/pause, next/prev. Before you panic, rest assured that any program you have that uses playerctl will still work with these funky new binds.
+> Unfortunately, due to a lot of track ID mismatches, ```playerctl``` doesn't communicate well with spotify_player -d, which is strange because spotify-player works fine with playerctl. In short; the daemon's broken context queue makes the rofi interface play the wrong tracks and consequently; break proper continuous context-based playback. So the solution is a set of compositor keybinds that will replace your playerctl's (if you use them). If you don't use them, no need to worry about step 2 of the installation process. This is purely for using quick keybinds to play/pause, next/prev. Before you panic, rest assured that any program you have that uses playerctl will still work with these funky new binds.
 
 # Installation
 - Drop both directories in ```~/.config/rofi/```.
