@@ -45,5 +45,15 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 - pgrep
 - A nerd font
 
+> [!NOTE]
+> Unfortunately, due to a lot of track id mismatches, ```playerctl``` doesn't communicate well with spotify_player -d, which is strange because spotify-player works fine with playerctl. So the solution is a set of compositor keybinds that will replace your playerctl's (if you use them). If you don't use them, no need to worry about step 2 of the installation process. This is purely for using quick keybinds to play/pause, next/prev.
+
 # Installation
-Simply drop both directories in ```~/.config/rofi/``` and set a keybind or shortcut to ```spotify.lua```.
+- Drop both directories in ```~/.config/rofi/```.
+- Replace your playerctl keybinds with these. Other programs that use playerctl will still play along with these binds:
+
+~~~
+ ```lua ~/.config/rofi/scripts/spotify/spotify.lua play-pause || playerctl play-pause```
+ ```lua ~/.config/rofi/scripts/spotify/spotify.lua prev || playerctl previous```
+ ```lua ~/.config/rofi/scripts/spotify/spotify.lua next || playerctl next```
+~~~
