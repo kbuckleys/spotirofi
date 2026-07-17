@@ -59,3 +59,8 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
  lua ~/.config/rofi/scripts/spotify/spotify.lua prev || playerctl previous
  lua ~/.config/rofi/scripts/spotify/spotify.lua next || playerctl next
 ~~~
+
+# Controls
+While this may seem silly, I have slightly different controls set in place for this setup, given you can navigate through the interface and retain your position when you reopen rofi. So given its scope, this had to be done.
+- Alt + Backspace will take you one page up.
+- Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember where you left off.
