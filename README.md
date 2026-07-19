@@ -1,5 +1,4 @@
 <b>A launcher for your tunes!</b> An advanced <a href="https://github.com/davatorium/rofi">rofi</a> interface designed for <a href="https://github.com/aome510/spotify-player">spotify-player</a> and a part of the <a href="https://github.com/kbuckleys/ZENWORKS">ZENWORKS</a> Suite.
-<br>
 
 <table>
   <tr>
