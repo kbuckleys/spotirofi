@@ -1,24 +1,36 @@
-<b>A launcher for your tunes!</b> An advanced [rofi](https://github.com/davatorium/rofi) interface designed for [spotify-player](https://github.com/aome510/spotify-player) and a part of the [ZENWORKS](https://github.com/kbuckleys/ZENWORKS) Suite.
+<h2><b>A launcher for your tunes!</b> An advanced <a href="https://github.com/davatorium/rofi">rofi</a> interface designed for <a href="https://github.com/aome510/spotify-player">spotify-player</a> and a part of the <a href="https://github.com/kbuckleys/ZENWORKS">ZENWORKS</a> Suite.</h2>
 
 <br>
 
+
+
+
+
+
+
+
 <table>
   <tr>
-      <img width="1016" height="198" alt="2026-07-17-130549_hyprshot" src="https://github.com/user-attachments/assets/66bf2901-c6df-4c43-a175-ef53110ae027" />
-      <br/>
-    </td>
-      <img width="1023" height="328" alt="2026-07-17-130738_hyprshot" src="https://github.com/user-attachments/assets/c7e6915e-a44e-4857-b3ca-5c1b5c22b9b5" />
-      <br/>
-    </td>
-      <img width="1019" height="281" alt="2026-07-17-130604_hyprshot" src="https://github.com/user-attachments/assets/bf1ac057-d3d6-44f1-8de0-88e7e396dfec" />
-    <br/>
-    </td>
-      <img width="1019" height="272" alt="2026-07-17-130620_hyprshot" src="https://github.com/user-attachments/assets/d7325747-74c9-4001-a2f4-21e04328c6ad" />
-    <br/>
-    </td>
+    <td><img width="1015" height="222" alt="2026-07-19-134954_region" src="https://github.com/user-attachments/assets/9c2d5d1f-6031-4e74-b450-1d95b8e74049" /></td>
+    <td>Main Menu</td>
   </tr>
-
----
+  <tr>
+    <td><img width="1018" height="276" alt="2026-07-19-135014_region" src="https://github.com/user-attachments/assets/7f1128dc-07e5-49f1-a203-b2364c451250" /></td>
+    <td>Track's Action Menu</td>
+  </tr>
+  <tr>
+    <td><img width="1016" height="328" alt="2026-07-19-135049_region" src="https://github.com/user-attachments/assets/c99b94b0-2a18-42c7-aaaf-ce235001b149" /></td>
+    <td>Liked Tracks</td>
+  </tr>
+  <tr>
+    <td><img width="1013" height="270" alt="2026-07-19-135138_region" src="https://github.com/user-attachments/assets/a33a03bb-9058-4cff-96b2-ad2df0a97859" /></td>
+    <td>Lyrics view</td>
+  </tr>
+  <tr>
+    <td><img width="1014" height="143" alt="2026-07-19-135403_region" src="https://github.com/user-attachments/assets/91c70be0-8a4b-4746-a048-eda7a708e782" /></td>
+    <td>Precise Voume Control</td>
+  </tr>
+</table>
 
 This is a near complete replacement for spotify-player's UI, almost everything you can do in the main client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's a lot you can do in this interface -and I mean A LOT- you can even show lyrics! So I'd rather list the things you CANNOT do:
 
