@@ -52,7 +52,7 @@ Long story short, spotify-player does most of the heavy lifting and the rofi int
 
 # Installation
 - Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotify.lua``` in your compositor's config.
-- Replace your playerctl keybinds with these. Other programs that use playerctl will still play along with these binds:
+- Replace your playerctl keybinds' targets with these. Other programs that use playerctl will still play along with these binds:
 
 ~~~
  lua ~/.config/rofi/scripts/spotify/spotify.lua play-pause || playerctl play-pause
