@@ -1,13 +1,6 @@
-<h2><b>A launcher for your tunes!</b> An advanced <a href="https://github.com/davatorium/rofi">rofi</a> interface designed for <a href="https://github.com/aome510/spotify-player">spotify-player</a> and a part of the <a href="https://github.com/kbuckleys/ZENWORKS">ZENWORKS</a> Suite.</h2>
+<h3><b>A launcher for your tunes!</b> An advanced <a href="https://github.com/davatorium/rofi">rofi</a> interface designed for <a href="https://github.com/aome510/spotify-player">spotify-player</a> and a part of the <a href="https://github.com/kbuckleys/ZENWORKS">ZENWORKS</a> Suite.</h3>
 
 <br>
-
-
-
-
-
-
-
 
 <table>
   <tr>
@@ -31,6 +24,8 @@
     <td>Precise Voume Control</td>
   </tr>
 </table>
+
+<br>
 
 This is a near complete replacement for spotify-player's UI, almost everything you can do in the main client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's a lot you can do in this interface -and I mean A LOT- you can even show lyrics! So I'd rather list the things you CANNOT do:
 
