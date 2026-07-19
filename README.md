@@ -66,4 +66,4 @@ While this may seem silly, I have slightly different controls set in place for t
 - Alt + Space takes you back to main menu, from any depth.
 - Alt + / takes you directly to Search > All, from any depth.
 - Alt + Return takes you to the currently active (played/paused) track's action menu.
-- Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember where you left off.
+- Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember your depth and resume where you left off.
