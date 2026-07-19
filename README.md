@@ -2,23 +2,23 @@
 
 <table>
   <tr>
-    <td><img width="1015" height="222" alt="2026-07-19-134954_region" src="https://github.com/user-attachments/assets/9c2d5d1f-6031-4e74-b450-1d95b8e74049" /></td>
+    <td><img width="1010" height="218" alt="2026-07-19-151243_region" src="https://github.com/user-attachments/assets/456ff58a-3119-4bb1-85a6-c590771a4c08" /></td>
     <td>Main Menu</td>
   </tr>
   <tr>
-    <td><img width="1018" height="276" alt="2026-07-19-135014_region" src="https://github.com/user-attachments/assets/7f1128dc-07e5-49f1-a203-b2364c451250" /></td>
+    <td><img width="1011" height="273" alt="2026-07-19-151252_region" src="https://github.com/user-attachments/assets/ad67201e-1f38-498b-934c-e3b5f80cf5c3" /></td>
     <td>Track's Action Menu</td>
   </tr>
   <tr>
-    <td><img width="1016" height="328" alt="2026-07-19-135049_region" src="https://github.com/user-attachments/assets/c99b94b0-2a18-42c7-aaaf-ce235001b149" /></td>
+    <td><img width="1017" height="328" alt="2026-07-19-151309_region" src="https://github.com/user-attachments/assets/09b963f9-cd33-467d-9cd0-22c7a13b1c0d" /></td>
     <td>Liked Tracks</td>
   </tr>
   <tr>
-    <td><img width="1013" height="270" alt="2026-07-19-135138_region" src="https://github.com/user-attachments/assets/a33a03bb-9058-4cff-96b2-ad2df0a97859" /></td>
+    <td><img width="1019" height="270" alt="2026-07-19-151355_region" src="https://github.com/user-attachments/assets/2916717e-7598-43b8-8a09-836bdbce32e1" /></td>
     <td>Lyrics view</td>
   </tr>
   <tr>
-    <td><img width="1014" height="143" alt="2026-07-19-135403_region" src="https://github.com/user-attachments/assets/91c70be0-8a4b-4746-a048-eda7a708e782" /></td>
+    <td><img width="1023" height="140" alt="2026-07-19-151408_region" src="https://github.com/user-attachments/assets/4bd2c733-e697-4a7a-a2fd-9a4563fccd54" /></td>
     <td>Precise Voume Control</td>
   </tr>
 </table>
