@@ -41,14 +41,15 @@ Another important notice, the first time you navigate the interface post-authent
 - rofi
 - cjson
 - lua 5.3+
-- luajit
 - curl
 - xdg-open
 - pgrep
 - A nerd font
 
 # Installation
+- run ```spotifyd authenticate``` in your terminal to generate an authentication token.
 - Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotirofi.lua``` in your compositor's config.
+- Run ```spotirofi.lua``` and enjoy.
 
 # Controls
 While this may seem silly, I have slightly different controls set in place for this setup, given you can navigate through the interface and retain your position when you reopen rofi. So given its scope, this had to be done.
