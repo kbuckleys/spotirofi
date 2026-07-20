@@ -47,7 +47,7 @@ Another important notice, the first time you navigate the interface post-authent
 - A nerd font
 
 # Installation
-- Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotify.lua``` in your compositor's config.
+- Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotirofi.lua``` in your compositor's config.
 
 # Controls
 While this may seem silly, I have slightly different controls set in place for this setup, given you can navigate through the interface and retain your position when you reopen rofi. So given its scope, this had to be done.
