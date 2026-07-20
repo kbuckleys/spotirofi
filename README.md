@@ -28,9 +28,7 @@
 This is a near complete replacement for any Spotify client, almost everything you can do in a full-fledged client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's a lot you can do in this interface -and I mean A LOT- you can even show lyrics! So I'd rather list the things you CANNOT do:
 
 - Precise seeking.
-- Removing a track from queue list.
-- Result pagination is hard capped, so at one point you'll have to use the main client.
-
+ 
 The script's first run will automatically take you to Spotify's authentication page, assuming you already have ```spotifyd``` installed. At launch, it will automatically run the daemon and you can start using the rofi interface right away.
 
 Another important notice, the first time you navigate the interface post-authentication; it may be a bit slow as it generates the cache files, which are located in ```~/.cache/spotirofi```. However, future runs will be fluid and snappy.
