@@ -40,14 +40,13 @@ Another important notice, the first time you navigate the interface post-authent
 - spotifyd
 - rofi
 - cjson
-- lua 5.3+
+- lua 5.4+
 - curl
 - xdg-open
 - pgrep
 - A nerd font
 
 # Installation
-- run ```spotifyd authenticate``` in your terminal to generate an authentication token.
 - Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotirofi.lua``` in your compositor's config.
 - Run ```spotirofi.lua``` and enjoy.
 
