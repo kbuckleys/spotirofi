@@ -50,7 +50,7 @@ Another important notice, the first time you navigate the interface post-authent
 - Run ```spotirofi.lua``` and enjoy.
 
 # Controls
-While this may seem silly, I have slightly different controls set in place for this setup, given you can navigate through the interface and retain your position when you reopen rofi. So given its scope, this had to be done.
+While this may seem silly, I have slightly different controls set in place for this setup, considering you can navigate through the interface and retain your position when you reopen rofi. So given this scope, some specific -and hopefully organic- keybinds had to be set in place.
 - Alt + Backspace takes you one page up.
 - Alt + / takes you directly to Search > All, from any depth.
 - Alt + Space takes you back to main menu, from any depth.
