@@ -33,7 +33,7 @@ This is a near complete replacement for spotify-player's UI, almost everything y
 
 The script's first run will automatically take you to Spotify's authentication page, assuming you already have spotify-player installed. At launch, it will automatically run the daemon ```spotify_player -d``` and you can start using the rofi interface right away. You're still able to run spotify-player normally, even with the daemon running, in case you want more advanced functionalities.
 
-Another important notice, the first time you navigate the interface post-authentication; it may be a bit slow as it generates the cache files, which are located in ```~/.cache/spotify_rofi```. However, future runs will be fluid and snappy.
+Another important notice, the first time you navigate the interface post-authentication; it may be a bit slow as it generates the cache files, which are located in ```~/.cache/spotirofi```. However, future runs will be fluid and snappy.
 
 # But why only for spotify-player?
 Long story short, spotify-player does most of the heavy lifting and the rofi interface is a mere portal to its CLI and cache. While I could transition to Spotify's Web API for broader compatibility, there are plenty of drawbacks that come along with it:
