@@ -41,6 +41,7 @@ Another important notice, the first time you navigate the interface post-authent
 - rofi
 - cjson
 - lua 5.3+
+- lua51-socket
 - curl
 - xdg-open
 - pgrep
