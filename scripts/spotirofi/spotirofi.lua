@@ -476,28 +476,35 @@ local function api_get(path, params)
     if not token then return nil end
     local url = "https://api.spotify.com/v1/" .. path
     if params then url = url .. "?" .. params end
-    local hdr = os.tmpname()
-    local r = shell("curl -s --max-time 5 -D " .. shell_quote(hdr) .. " -w '\\n%{http_code}' -H 'Authorization: Bearer " .. token .. "' " .. shell_quote(url))
-    local status = tonumber(string.match(r or "", "\n(%d+)$")) or 0
-    local body = string.match(r or "", "^(.-)\n%d+$") or r or ""
-    local function read_retry_after()
+
+    local function do_request()
+        local hdr = os.tmpname()
+        local r = shell("curl -s --max-time 5 -D " .. shell_quote(hdr) .. " -w '\\n%{http_code}' -H 'Authorization: Bearer " .. token .. "' " .. shell_quote(url))
+        local status = tonumber(string.match(r or "", "\n(%d+)$")) or 0
+        local body = string.match(r or "", "^(.-)\n%d+$") or r or ""
+        local retry = nil
         local hf = io.open(hdr, "r")
-        if not hf then return "30" end
-        local headers = hf:read("*a"); hf:close()
-        return string.match(headers, "[Rr]etry%-[Aa]fter:%s*(%d+)") or "30"
-    end
-    if status == 429 and not rate_limit_shown then
-        rate_limit_shown = true
-        local secs = read_retry_after()
+        if hf then
+            local headers = hf:read("*a"); hf:close()
+            retry = tonumber(string.match(headers, "[Rr]etry%-[Aa]fter:%s*(%d+)"))
+        end
         os.remove(hdr)
-        write_file("/tmp/spotirofi_rate_cooldown", os.time() + tonumber(secs) + 30) -- 0 API calls next launch + buffer
-        rofi_message("Spotify API rate limit reached (429). Retry after " .. secs .. "s.")
-        os.exit(0)
+        return status, body, retry
     end
-    os.remove(hdr)
+
+    local status, body, retry = do_request()
+    if status == 429 then
+        os.execute("sleep " .. tostring(retry or 1))
+        status, body = do_request()
+    end
     if status == 401 and not rate_limit_shown then
         rate_limit_shown = true
         rofi_message("Spotify token expired (401). Restart rofi to refresh.")
+        os.exit(0)
+    end
+    if status == 429 then
+        rate_limit_shown = true
+        rofi_message("Spotify API rate limit reached (429).")
         os.exit(0)
     end
     if status >= 400 then return nil end
@@ -523,6 +530,7 @@ local function load_liked_tracks_full()
         end
         if #d.items < 50 then break end
         offset = offset + 50
+        os.execute("sleep 0.5")
     end
     table.sort(tracks, function(a,b) return (a.added_at or "") > (b.added_at or "") end)
     return tracks
@@ -564,6 +572,7 @@ local function load_saved_albums()
         end
         if #d.items < 50 then break end
         offset = offset + 50
+        os.execute("sleep 0.5")
     end
     table.sort(items, function(a,b) return (a.name or ""):lower() < (b.name or ""):lower() end)
     if #items > 0 then
@@ -590,6 +599,7 @@ local function load_followed_artists()
         for _, a in ipairs(d.artists.items) do items[#items+1] = a end
         if not d.artists.next then break end
         after = d.artists.cursors and d.artists.cursors.after
+        os.execute("sleep 0.5")
     end
     table.sort(items, function(a,b) return (a.name or ""):lower() < (b.name or ""):lower() end)
     if #items > 0 then
@@ -1795,17 +1805,6 @@ local function main()
     end
     if not daemon_alive then
         os.execute(HOME .. "/.config/rofi/scripts/spotirofi/spotirofi.lua --daemon &")
-    end
-
-    local rate_cool = read_file("/tmp/spotirofi_rate_cooldown")
-    if rate_cool then
-        local until_t = tonumber(trim(rate_cool))
-        if until_t and os.time() < until_t then
-            local secs = until_t - os.time()
-            rofi_message("Spotify API rate limit active.\nRetry after " .. secs .. "s.")
-            os.exit(0)
-        end
-        os.remove("/tmp/spotirofi_rate_cooldown")
     end
 
     ensure_spotifyd_auth()
