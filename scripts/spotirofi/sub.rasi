@@ -6,6 +6,11 @@
 
 @theme "ZENON"
 
+configuration {
+    kb-remove-char-back: "BackSpace";
+    kb-remove-to-sol: "";
+}
+
 window {
     location: south;
     anchor: south;
@@ -30,19 +35,21 @@ listview {
     fixed-columns: false;
     fixed-height: false;
     scrollbar: false;
-    columns: 2;
-    lines: 11;
+    columns: 1;
+    lines: 8;
 }
 
 element {
     padding: 2px 8px;
 }
 element-text {
-    highlight: bold #b6e0a4;
+    font: "0xProto Nerd Font 12";
     horizontal-align: 0.5;
+    highlight: bold #b6e0a4;
 }
 element-text selected {
     background-color: transparent;
+    text-color: #b6e0a4;
 }
 
 message {
