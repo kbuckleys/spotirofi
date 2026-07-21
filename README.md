@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <td><img width="1005" height="323" alt="2026-07-21-123850_region" src="https://github.com/user-attachments/assets/29384991-c927-4678-a743-ade3923b3587" /></td>
+    <td><img width="1010" height="321" alt="2026-07-21-154200_region" src="https://github.com/user-attachments/assets/9ead2ef8-47fb-4cf6-a911-5d6beb1d2ca8" /></td>
     <td>Main Menu</td>
   </tr>
   <tr>
