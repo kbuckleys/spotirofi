@@ -1637,6 +1637,14 @@ local function main()
     ensure_spotifyd()
     load_queue()
     populate_liked_ids()
+    if not (read_file(LIKED_CACHE) and read_file(ALBUM_CACHE) and read_file(ARTIST_CACHE)) then
+        os.execute("notify-send -t 10000 --app-name=spotirofi 'Spotirofi' 'First run: building library...' &")
+        load_liked_tracks()
+        load_saved_albums()
+        load_followed_artists()
+        populate_liked_ids()
+        os.execute("notify-send -t 3000 --app-name=spotirofi 'Spotirofi' 'Library ready' &")
+    end
     replay_session()
     last_playback = 0
 
