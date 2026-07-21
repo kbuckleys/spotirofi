@@ -10,7 +10,7 @@
     <td>Track's Action Menu</td>
   </tr>
   <tr>
-    <td><img width="1012" height="243" alt="2026-07-21-124055_region" src="https://github.com/user-attachments/assets/0648103e-7145-49bd-9b63-20ab326736ff" /></td>
+    <td><img width="1009" height="243" alt="2026-07-21-125943_region" src="https://github.com/user-attachments/assets/31285995-a5a6-4aa4-9c72-3cfb72fda85c" />></td>
     <td>Liked Tracks</td>
   </tr>
   <tr>
