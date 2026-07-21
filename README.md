@@ -40,9 +40,12 @@ The script's first run will automatically take you to Spotify's authentication p
 - rofi
 - cjson
 - lua 5.4+
+- luajit
 - playerctl
 - curl
 - xdg-open
+- notify-send
+- perl
 - pgrep
 - A nerd font
 
