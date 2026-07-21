@@ -24,9 +24,9 @@
 This is a near complete replacement for any Spotify client, almost everything you can do in a full-fledged client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's a lot you can do in this interface -and I mean A LOT- you can even show lyrics! So I'd rather list the things you CANNOT do:
 
 - Remove from queue (Spotify Web API limitation)
-> Local queue can be implemented, but it may add complexity. Remains to be explored
+> Local queue can be implemented, but may add complexity. Remains to be explored
 - Podcast management
-> Not that spotirofi can't do it, I just simply didn't implement support for it
+> Not that spotirofi can't do it, I simply didn't implement support for it
  
 The script's first run will automatically take you to Spotify's authentication page (two separate pages in fact, that's just a spotifyd quirk), assuming you already have ```spotifyd``` installed. At launch, it will notify you that it's building cache and will automatically run the daemons and display the main menu, at that point you can start using the rofi interface right away.
 
