@@ -25,13 +25,10 @@ This is a near complete replacement for any Spotify client, almost everything yo
 
 - Remove from queue. (Spotify's Web API limitation)
  
-The script's first run will automatically take you to Spotify's authentication page (two separate pages in fact, that's just a spotifyd quirk), assuming you already have ```spotifyd``` installed. At launch, it will automatically run the daemon and you can start using the rofi interface right away.
-
-Another important notice, the first time you navigate the interface post-authentication; it may be a bit slow as it generates the cache files, which are located in ```~/.cache/spotirofi```. However, future runs will be fluid and snappy.
+The script's first run will automatically take you to Spotify's authentication page (two separate pages in fact, that's just a spotifyd quirk), assuming you already have ```spotifyd``` installed. At launch, it will notify you that it's building cache and will automatically run the daemons and display the main menu, at that point you can start using the rofi interface right away.
 
 # Functionality
 - Your paths are nested and retained by default, given the number of menus and submenus. This is why some custom keybinds had to be set in place, instead of reopening the main menu every time and going through multiple depth levels.
-- First run will be slow as the script generates a fresh cache for faster and near instant interactions.
 - Cache gets updated every 12 hours. a safeguard in case you made external changes to your library from, say; your phone or another Spotify client. There's also a manual option to refresh the cache, <b>but only use it when you absolutely have to.</b> Your activity on the player is dynamically and locally refreshed anyway, so you'll probably never have to use this feature.
 
 # Dependencies
