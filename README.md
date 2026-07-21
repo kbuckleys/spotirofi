@@ -2,15 +2,15 @@
 
 <table>
   <tr>
-    <td><img width="1010" height="218" alt="2026-07-19-151243_region" src="https://github.com/user-attachments/assets/456ff58a-3119-4bb1-85a6-c590771a4c08" /></td>
+    <td><img width="1009" height="323" alt="2026-07-21-122412_region" src="https://github.com/user-attachments/assets/838bd22e-5b84-4a91-ae5e-a7baa930a63c" /></td>
     <td>Main Menu</td>
   </tr>
   <tr>
-    <td><img width="1011" height="273" alt="2026-07-19-151252_region" src="https://github.com/user-attachments/assets/ad67201e-1f38-498b-934c-e3b5f80cf5c3" /></td>
+    <td><img width="1007" height="272" alt="2026-07-21-122421_region" src="https://github.com/user-attachments/assets/1a681c8b-47e5-409a-a5d9-83752648dbe7" /></td>
     <td>Track's Action Menu</td>
   </tr>
   <tr>
-    <td><img width="1017" height="328" alt="2026-07-19-151309_region" src="https://github.com/user-attachments/assets/09b963f9-cd33-467d-9cd0-22c7a13b1c0d" /></td>
+    <td><img width="1014" height="430" alt="2026-07-21-122437_region" src="https://github.com/user-attachments/assets/1cefec2b-b696-47c7-9141-6c13e1b21348" /></td>
     <td>Liked Tracks</td>
   </tr>
   <tr>
