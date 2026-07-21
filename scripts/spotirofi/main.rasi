@@ -39,7 +39,6 @@ element {
 }
 element-text {
     highlight: bold #b6e0a4;
-    horizontal-align: 0.5;
 }
 element-text selected {
     background-color: transparent;
