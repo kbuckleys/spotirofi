@@ -9,7 +9,7 @@ This is a near complete replacement for any Spotify client, almost everything yo
 - Podcast management
   > Not that spotirofi can't do it, I simply didn't implement support for it
  
-The script's first run will automatically take you to Spotify's authentication page (two separate pages in fact, that's just a spotifyd quirk). At launch, it will notify you that it's building cache and will automatically run the daemons and display the main menu, at that point you can start using the rofi interface right away.
+The script's first run will automatically take you to Spotify's authentication page (two separate pages in fact, that's just a ```spotifyd``` quirk). At launch, it will notify you that it's building cache and will automatically run the daemons and display the main menu, at that point you can start using the rofi interface right away.
 
 # Functionality
 - Your paths are nested and retained by default, given the number of menus and submenus. This is why some custom keybinds had to be set in place, instead of reopening the main menu every time and going through multiple depth levels.
