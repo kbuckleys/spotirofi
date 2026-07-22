@@ -43,5 +43,4 @@ While this may seem silly, I have slightly different controls set in place for t
 - Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember your depth and resume where you left off
 
 > [!NOTE]
-> - Made For You is a dedicated place for your own followed Spotify's curated playlists. if it's empty, it's because you didn't add any of these lists.
-> - Recently Played only works if you have your listening activity shared. Set as a privacy setting that you can access from Spotify mobile or the official desktop client.
+> Made For You is a dedicated place for your own followed Spotify's curated playlists. if it's empty, it's because you didn't add any of these lists.
