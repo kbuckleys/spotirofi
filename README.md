@@ -1,25 +1,6 @@
+https://github.com/user-attachments/assets/f0d46590-c18e-4a06-9ac5-4488df955887
+
 <b>A launcher for your tunes!</b> An advanced <a href="https://github.com/davatorium/rofi">rofi</a> interface and a part of the <a href="https://github.com/kbuckleys/ZENWORKS">ZENWORKS</a> Suite.
-
-<table>
-  <tr>
-    <td><img width="1010" height="321" alt="2026-07-21-154200_region" src="https://github.com/user-attachments/assets/9ead2ef8-47fb-4cf6-a911-5d6beb1d2ca8" /></td>
-    <td>Main Menu</td>
-  </tr>
-  <tr>
-    <td><img width="1014" height="430" alt="2026-07-21-122437_region" src="https://github.com/user-attachments/assets/1cefec2b-b696-47c7-9141-6c13e1b21348" /></td>
-    <td>Track's Action Menu</td>
-  </tr>
-  <tr>
-    <td><img width="1009" height="271" alt="2026-07-21-132451_region" src="https://github.com/user-attachments/assets/5be676f6-3fe7-492b-95f9-9a57fc6f00f1" /></td>
-    <td>Liked Tracks</td>
-  </tr>
-  <tr>
-    <td><img width="1019" height="270" alt="2026-07-19-151355_region" src="https://github.com/user-attachments/assets/2916717e-7598-43b8-8a09-836bdbce32e1" /></td>
-    <td>Lyrics view</td>
-  </tr>
-</table>
-
-<br>
 
 This is a near complete replacement for any Spotify client, almost everything you can do in a full-fledged client can be done from within this interface. It's meant to be a quick and convenient way to manage your listening on the fly, much like a program launcher, except for your music. There's a lot you can do in this interface -and I mean A LOT- you can even show lyrics! So I'd rather list the things you CANNOT do:
 
