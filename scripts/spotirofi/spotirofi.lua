@@ -233,11 +233,12 @@ local search_pending  = false
 local main_pending    = false
 local liked_pending   = false
 local queue_pending   = false
+local volume_pending  = false
 local view_actions, view_artist, view_lyrics, view_add_pl
 local get_playback
 
 local function rofi_dmenu(entries, opts)
-    if search_pending or main_pending or liked_pending or queue_pending then return nil end
+    if search_pending or main_pending or liked_pending or queue_pending or volume_pending then return nil end
     opts = opts or {}
     local prompt   = opts.prompt or ""
     local mesg     = opts.mesg
@@ -253,7 +254,8 @@ local function rofi_dmenu(entries, opts)
                       "-kb-custom-3","Alt+slash","-kb-custom-4","Alt+Return",
                       "-kb-custom-5","Alt+KP_Enter",
                       "-kb-custom-6","Alt+l",
-                      "-kb-custom-7","Alt+q"}
+                      "-kb-custom-7","Alt+q",
+                      "-kb-custom-8","Alt+v"}
         if opts.custom == false then args[#args+1] = "-no-custom" end
         if markup then args[#args+1] = "-markup-rows"; args[#args+1] = "-markup" end
         if by_index then args[#args+1] = "-format"; args[#args+1] = "i" end
@@ -286,6 +288,7 @@ local function rofi_dmenu(entries, opts)
         if exit_code == 12 then session_clear(); search_pending = true; return nil end
         if exit_code == 15 then session_clear(); liked_pending = true; return nil end
         if exit_code == 16 then session_clear(); queue_pending = true; return nil end
+        if exit_code == 17 then session_clear(); volume_pending = true; return nil end
         if exit_code == 13 or exit_code == 14 then
             last_playback = 0
             get_playback()
@@ -1114,8 +1117,9 @@ local function view_browse(entries, items, mesg, ctx, ctx_type, ctx_id)
     local is_playlist_list = ctx_type == "playlist" and not ctx_id or ctx == "search-playlist"
     local is_search_all   = ctx == "all"
 
+    local pre_sel = 0
     while true do
-        local idx = rofi_dmenu(entries, {prompt=ctx or "Browse", mesg=mesg, custom=false, by_index=true, markup=is_track, use_menu=true})
+        local idx = rofi_dmenu(entries, {prompt=ctx or "Browse", mesg=mesg, custom=false, by_index=true, markup=is_track, use_menu=true, sel=pre_sel})
         if not idx then return nil end
         if idx < 1 or idx > #items then goto br_next end
         local item = items[idx]
@@ -1132,6 +1136,10 @@ local function view_browse(entries, items, mesg, ctx, ctx_type, ctx_id)
                 for i = 1, #items do
                     entries[i] = string.format("%2d. %s", i, display_track(items[i]))
                 end
+                pre_sel = 0
+                for i = 1, #items do
+                    if items[i].id == current_id then pre_sel = i - 1; break end
+                end
             end
         elseif is_search_all then
             local st = item._stype
@@ -1140,6 +1148,10 @@ local function view_browse(entries, items, mesg, ctx, ctx_type, ctx_id)
                 get_playback()
                 for i = 1, #items do
                     entries[i] = string.format("%2d. %s", i, display_track(items[i]))
+                end
+                pre_sel = 0
+                for i = 1, #items do
+                    if items[i].id == current_id then pre_sel = i - 1; break end
                 end
             elseif st == "albums" then
                 local action = rofi_dmenu({"Open Album", "Save Album"}, {prompt=item.name or "Album", mesg=artist_names(item), custom=false, theme=THEME_SUB})
@@ -1749,6 +1761,37 @@ local function view_your_queue()
     return view_browse(entries, tracks, mesg, "your-queue", nil, nil)
 end
 
+local function view_volume()
+    local supports_vol = mem_get("spotifyd_device_vol")
+    if supports_vol == false then
+        rofi_message("Device doesn't support volume control"); return
+    end
+    while true do
+        local vi = rofi_dmenu({"Volume +5", "Volume -5", '<span foreground="#20242a">────────────────────</span>',
+                               "25%", "50%", "75%", "100%"},
+            {prompt="Volume", mesg=vol_mesg(), custom=false, theme=THEME_SUB, markup=true})
+        if not vi or vi == "" then break end
+        local vol = get_saved_volume()
+        if vi == "Volume +5" then
+            local nv = math.min(vol + 5, 100)
+            os.execute("playerctl volume " .. string.format("%.2f", nv / 100) .. " 2>/dev/null")
+            save_volume(nv)
+        elseif vi == "Volume -5" then
+            local nv = math.max(vol - 5, 0)
+            os.execute("playerctl volume " .. string.format("%.2f", nv / 100) .. " 2>/dev/null")
+            save_volume(nv)
+        elseif vi == "25%" then
+            os.execute("playerctl volume 0.25 2>/dev/null"); save_volume(25)
+        elseif vi == "50%" then
+            os.execute("playerctl volume 0.50 2>/dev/null"); save_volume(50)
+        elseif vi == "75%" then
+            os.execute("playerctl volume 0.75 2>/dev/null"); save_volume(75)
+        elseif vi == "100%" then
+            os.execute("playerctl volume 1.00 2>/dev/null"); save_volume(100)
+        end
+    end
+end
+
 -- VIEW: SYSTEM
 
 local function view_system()
@@ -1762,7 +1805,7 @@ local function view_system()
         if not sel then break end
         local clean = sel:gsub("<[^>]+>", "")
         if clean == "Keybinds" then
-            rofi_message("Alt+Return  →  Current track actions\nAlt+Backspace  →  Go back / Main menu\nAlt+Space  →  Exit to main menu\nAlt+/  →  Search all\nAlt+l  →  Liked tracks\nAlt+q  →  Your queue\nReturn  →  Select\nEscape  →  Close")
+            rofi_message("Alt+Return  →  Current track actions\nAlt+Backspace  →  Go back / Main menu\nAlt+Space  →  Exit to main menu\nAlt+/  →  Search all\nAlt+l  →  Liked tracks\nAlt+q  →  Your queue\nAlt+v  →  Volume\nReturn  →  Select\nEscape  →  Close")
         elseif clean:match("^Bitrate") then
             local br_opts = {}
             for _, v in ipairs({96, 160, 320}) do
@@ -2066,6 +2109,7 @@ local function main()
         if search_pending then search_pending = false; session_push({view="search", query="all"}); view_search("all"); goto m1 end
         if liked_pending  then liked_pending  = false; view_liked_tracks(); goto m1 end
         if queue_pending  then queue_pending  = false; view_your_queue(); goto m1 end
+        if volume_pending then volume_pending = false; view_volume(); goto m1 end
         if not sel or sel == "" then goto m1 end
 
         if      sel == "Search" then
@@ -2114,36 +2158,7 @@ local function main()
                 if r and r:match("2..") then inv_playback() else rofi_message("Failed to toggle repeat") end
             end
         elseif  sel == "System"        then view_system()
-        elseif  sel == "Volume" then
-            local supports_vol = mem_get("spotifyd_device_vol")
-            if supports_vol == false then
-                rofi_message("Device doesn't support volume control")
-            else
-                while true do
-                    local vi = rofi_dmenu({"Volume +5", "Volume -5", '<span foreground="#20242a">────────────────────</span>',
-                                           "25%", "50%", "75%", "100%"},
-                        {prompt="Volume", mesg=vol_mesg(), custom=false, theme=THEME_SUB, markup=true})
-                    if not vi or vi == "" then break end
-    local vol = get_saved_volume()
-                    if vi == "Volume +5" then
-                        local nv = math.min(vol + 5, 100)
-                        os.execute("playerctl volume " .. string.format("%.2f", nv / 100) .. " 2>/dev/null")
-                        save_volume(nv)
-                    elseif vi == "Volume -5" then
-                        local nv = math.max(vol - 5, 0)
-                        os.execute("playerctl volume " .. string.format("%.2f", nv / 100) .. " 2>/dev/null")
-                        save_volume(nv)
-                    elseif vi == "25%" then
-                        os.execute("playerctl volume 0.25 2>/dev/null"); save_volume(25)
-                    elseif vi == "50%" then
-                        os.execute("playerctl volume 0.50 2>/dev/null"); save_volume(50)
-                    elseif vi == "75%" then
-                        os.execute("playerctl volume 0.75 2>/dev/null"); save_volume(75)
-                    elseif vi == "100%" then
-                        os.execute("playerctl volume 1.00 2>/dev/null"); save_volume(100)
-                    end
-                end
-            end
+        elseif  sel == "Volume" then view_volume()
         end
         ::m1::
     end
