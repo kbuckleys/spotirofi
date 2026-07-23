@@ -46,7 +46,8 @@ Given the scope, you can be easily multiple levels deep as you navigate through 
 - Alt + Q jumps to your queue list
 - Alt + / jumps to Search > All
 - Alt + Space jumps to main menu
-- Alt + Return jumps to the currently active (played/paused) track's action menu
+- Alt + V jumps to the player's volume control panel (not system volume)
+- Alt + Return jumps to the currently active (playing/paused) track's action menu
 - Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember your depth and resume where you left off
 
 > [!NOTE]
