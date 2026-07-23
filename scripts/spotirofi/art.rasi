@@ -28,7 +28,7 @@ textbox {
 
 message {
     background-color: #20242a;
-    padding: 8px;
+    padding: 4px;
 }
 
 inputbar {
@@ -39,10 +39,6 @@ listview {
     columns: 1;
     lines: 1;
     scrollbar: false;
-}
-
-element {
-    padding: 0;
 }
 
 element-icon {
