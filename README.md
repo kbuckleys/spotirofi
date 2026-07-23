@@ -40,7 +40,7 @@ The script's first run will automatically take you to Spotify's authentication p
 
 # Controls
 Given the scope, you can be easily multiple levels deep as you navigate through menus, so it was important to set some keybinds in place for convenience and faster -hopefully organic- interactions. All keybinds can be  triggered from any depth level.
-> Keybinds can also be viewed from Main > System > Keybinds
+> Keybinds can also be viewed from <b>Main > System > Keybinds</b>
 - Alt + Backspace takes you one level back
 - Alt + L jumps to your liked tracklist
 - Alt + Q jumps to your queue list
