@@ -40,10 +40,13 @@ The script's first run will automatically take you to Spotify's authentication p
 
 # Controls
 While this may seem silly, I have slightly different controls set in place for this setup, considering you can navigate through the interface and retain your position when you reopen rofi. So given this scope, some specific -and hopefully organic- keybinds had to be set in place.
-- Alt + Backspace takes you one page up
-- Alt + / takes you directly to Search > All, from any depth
-- Alt + Space takes you back to main menu, from any depth
-- Alt + Return takes you to the currently active (played/paused) track's action menu, from any depth
+> All keybinds can be triggered from any depth level
+- Alt + Backspace takes you one level back
+- Alt + L jumps to your liked tracklist
+- Alt + Q jumps to your queue list
+- Alt + / jumps to Search > All
+- Alt + Space jumps to main menu
+- Alt + Return jumps to the currently active (played/paused) track's action menu
 - Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember your depth and resume where you left off
 
 > [!NOTE]
