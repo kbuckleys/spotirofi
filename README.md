@@ -47,9 +47,10 @@ Given the scope, you can be easily multiple levels deep as you navigate through 
 - Alt + / jumps to Search > All
 - Alt + Space jumps to main menu
 - Alt + S jumps to active track's seek menu
-- Alt + C highlights the currently active track in a list.
 - Alt + V jumps to the player's volume control panel (not system volume)
 - Alt + Return jumps to the currently active (playing/paused) track's action menu
+- Alt + C highlights the currently active track in a list
+  > it also highlights the current line in a playing track's lyrics view (if track has synced lyrics)
 - Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember your depth and resume where you left off
 
 > [!NOTE]
