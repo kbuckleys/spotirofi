@@ -46,6 +46,7 @@ Given the scope, you can be easily multiple levels deep as you navigate through 
 - Alt + Q jumps to your queue list
 - Alt + / jumps to Search > All
 - Alt + Space jumps to main menu
+- Alt + S jumps to active track's seek menu
 - Alt + C highlights the currently active track in a list.
 - Alt + V jumps to the player's volume control panel (not system volume)
 - Alt + Return jumps to the currently active (playing/paused) track's action menu
