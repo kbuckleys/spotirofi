@@ -6,18 +6,18 @@
 
 @theme "ZENON"
 
+configuration {
+    show-icons: true;
+}
+
 window {
-    location: south;
-    anchor: south;
-    width: 1000px;
+    location: center;
+    anchor: center;
+    width: 640px;
 }
 
 mainbox {
-    children: [ inputbar, message, listview ];
-}
-
-inputbar {
-    enabled: false;
+    children: [ message, listview ];
 }
 
 textbox {
@@ -26,25 +26,30 @@ textbox {
     font: "0xProto Nerd Font Bold 12";
 }
 
+message {
+    background-color: #20242a;
+    padding: 8px;
+}
+
+inputbar {
+    enabled: false;
+}
+
 listview {
-    fixed-columns: false;
-    fixed-height: false;
+    columns: 1;
+    lines: 1;
     scrollbar: false;
-    columns: 2;
-    lines: 6;
 }
 
 element {
-    padding: 2px 8px;
-}
-element-text {
-    highlight: bold #b6e0a4;
-}
-element-text selected {
-    background-color: transparent;
+    padding: 0;
 }
 
-message {
-    background-color: #20242a;
-    padding: 4px;
+element-icon {
+    size: 640px;
+    expand: false;
+}
+
+element-text {
+    enabled: false;
 }
