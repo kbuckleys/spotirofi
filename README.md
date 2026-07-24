@@ -1,4 +1,7 @@
-<img width="1734" height="308" alt="ascii-text-art" src="https://github.com/user-attachments/assets/cfedabca-5deb-4834-845f-44aaca207619" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/cfedabca-5deb-4834-845f-44aaca207619">
+  <img src="image-light.png" alt="">
+</picture>
 
 ---
 
