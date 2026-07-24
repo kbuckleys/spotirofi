@@ -52,18 +52,30 @@ The script's first run will automatically take you to Spotify's authentication p
 # Controls
 Given the scope, you can be easily multiple levels deep as you navigate through menus, so it was important to set some keybinds in place for convenience and faster -hopefully organic- interactions.
 > Keybinds can also be viewed from <b>Main > System > Keybinds</b>
-- Alt + Backspace takes you one level back
-- Alt + L jumps to your liked tracklist
-- Alt + Q jumps to your queue list
-- Alt + / jumps to Search > All
-- Alt + Space jumps to main menu
-- Alt + A views album art for active track
-- Alt + S jumps to active track's seek menu
-- Alt + V jumps to the player's volume control panel (not system volume)
-- Alt + Return jumps to the active (playing/paused) track's action menu
-- Alt + C highlights the active track in a list
-  > it also highlights the current line in a playing track's lyrics view (if track has synced lyrics)
-- Esc will close the rofi interface, regardless of where you are, and when you next open rofi again, it will remember your depth and resume where you left off
+
+<body>
+  <table>
+    <thead>
+      <tr><th>Key</th><th>Action</th><th>Context</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><kbd>Alt+Return</kbd></td><td>Jump to main menu</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+Backspace</kbd></td><td>Back one level</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+Space</kbd></td><td>Exit to main menu</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+/</kbd></td><td>Search all</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+l</kbd></td><td>Liked tracks</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+q</kbd></td><td>Your queue</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+v</kbd></td><td>Volume</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+a</kbd></td><td>Album art of current track</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Alt+c</kbd></td><td>Jump to playing track / Jump to current lyric line</td><td>List / Lyrics</td></tr>
+      <tr><td><kbd>Alt+s</kbd></td><td>Seek current track</td><td>List / Lyrics</td></tr>
+      <tr><td><kbd>Return</kbd></td><td>Select</td><td>Anywhere</td></tr>
+      <tr><td><kbd>Escape</kbd></td><td>Close</td><td>Anywhere</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
 
 > [!NOTE]
 > Made For You is a dedicated place for your own followed Spotify's curated playlists. if it's empty, it's because you didn't add any of these lists.
