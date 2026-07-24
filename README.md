@@ -1,3 +1,5 @@
+<img width="1734" height="308" alt="ascii-text-art" src="https://github.com/user-attachments/assets/cfedabca-5deb-4834-845f-44aaca207619" />
+
 https://github.com/user-attachments/assets/f0d46590-c18e-4a06-9ac5-4488df955887
 
 <b>A launcher for your tunes!</b> An advanced <a href="https://github.com/davatorium/rofi">rofi</a> interface and a part of the <a href="https://github.com/kbuckleys/ZENWORKS">ZENWORKS</a> Suite.
