@@ -36,18 +36,18 @@ The script's first run will automatically take you to Spotify's authentication p
 - rofi
 - cjson
 - lua 5.4+
-- luajit
 - playerctl
 - curl
-- xdg-open
+- wl-clipboard
 - notify-send
 - perl
 - pgrep
 - A nerd font
 
 # Installation
-- Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotirofi.lua``` in your compositor's config.
-- Run ```spotirofi.lua``` and enjoy.
+- Drop both directories in ```~/.config/rofi/``` and assign a keybind for ```spotirofi.lua``` in your compositor's config
+- chmod +x ```spotirofi.lua``` to make it executable
+- Run ```spotirofi.lua``` and enjoy
 
 # Controls
 Given the scope, you can be easily multiple levels deep as you navigate through menus, so it was important to set some keybinds in place for convenience and faster -hopefully organic- interactions.
